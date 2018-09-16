@@ -1,0 +1,567 @@
+/* ---------- GLOBAL HTML ELEMENTS AND CLASSES ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body, p, img {
+    margin:0;
+    padding:0;
+    border:0;
+}
+
+body {
+    color: #707070;
+    font-family: $lato_regular;    
+    background-color: #021844;
+    //font-family: $lato_bold;
+}
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table
+}
+.clearfix:after {
+    clear: both
+} 
+.left {
+    float: left !important;
+}
+.right {
+    float: right !important;
+}
+.flex {
+    display: flex;
+    .heightFixed {
+        height: 300px;
+    }
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 20px 0;
+    color: #898D91;
+    font-weight: normal;
+    font-family: $lato_regular;
+}
+h1 {
+    color: #1A1A1A;
+    font-family: $lato_bold;
+    font-size: 26px;
+    padding: 30px 30px 10px 30px;
+    border-bottom: 1px solid #999;
+    margin-bottom: 20px;
+}
+h4, h3,h5 {
+    @include h3Style();
+}
+h4 {
+    font-family: $lato_bold;
+}
+h5 {
+    font-size: 15px;
+    color: #405071;
+}
+
+.half {
+    width: 50%;
+}
+input {
+    border: 2px solid #081E49;
+    text-align: center;
+    height: 36px;
+    line-height: 36px;
+    font-family: $lato_regular;
+    font-size: 16px;
+    color: #666;
+    border-radius: (20px);
+    &.datepicker {
+        margin-top: 20px;
+        border: none;
+        color: #666;
+        background: transparent;
+        font-size: 14px;
+        &:nth-child(4) {
+            text-align: right;
+        }
+        &:nth-child(5) {
+            text-align: left;
+        }
+    }
+    &.error, &.empty {
+        border: 2px solid #ff0000;
+    }    
+}
+.button {
+    font-family: $lato_regular;
+    font-size: 18px;
+    color: #666;
+    background-color: $blue;
+    border-radius: (20px);
+    height: 36px;
+    line-height: 36px;
+    border: none;
+    padding: 0 30px;
+    outline: none;
+    cursor: pointer;
+    &:hover {
+        @include hover-effect();
+    }
+    &.red {
+        background-color: $red;
+    }
+    &.green {
+        background-color: $green;
+    }
+    &.orange {
+        background-color: $orange;
+    }
+    &.darkBlue {
+        background-color: $darkBlue;
+        color: #fff;
+        font-family: $roboto_condensed;
+        font-size: 16px;
+    }
+    &.reset {
+        background-color: #fff;
+        color: $darkBlue;
+        border: 2px solid $darkBlue;
+        height: 34px;
+        line-height: 34px;
+        display: block;
+    }    
+}
+.red {
+    color: $red;
+}
+.green {
+    color: $green;
+}
+.orange {
+    color: $orange;
+}
+span#errorMessage {
+    color: #ff0000;
+}
+.container {
+    max-width: 1850px;    
+    .content {
+        background-color: #eeeeee;
+        height:100vh;
+        .searchForWrapper {
+            padding: 0 30px 30px;
+            input {
+                margin-right: 20px;
+                width: 295px;
+                &.contractId {
+                    margin-right: 60px;
+                }
+                &.button {
+                    width: auto;
+                }
+            }
+        }
+        .moreInfoWrap {
+            padding: 0 30px 30px;
+            position: relative;
+            .infoBlock {
+                background-color: #fff;
+                padding: 10px 20px;
+                float: left;
+                @include border-radius(5px);
+                h3 {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                }
+                p {
+                    font-size: 14px;
+                    color: $darkBlue;                        
+                    span {
+                        color: #707070;
+                        width: 130px;
+                        display: inline-block;
+                        &:nth-child(2) {
+                            color: $darkBlue;
+                        }
+                    }
+                }
+            }
+            .dateWrap {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 20px;
+                margin: 0 auto;
+                width: auto;
+                text-align: center;
+                display: block;
+                a.filterButton {
+                    height: 34px;
+                    line-height: 34px;
+                    border: none;
+                    padding: 0 70px;
+                    display: inline-block;
+                    border: 2px solid $darkBlue;
+                    @include border-radius(20px);
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                    background-color: #fff;
+                    color: $darkBlue;                   
+                    &.filterButtonRight {
+                        @include border-radius(20px);
+                        border-top-left-radius: 0px;
+                        border-bottom-left-radius: 0px;
+                        margin-left: -5px;
+                    }
+                    &.active {
+                        background-color: $darkBlue;
+                        color: #fff;
+                    }
+                    &:hover {
+                        text-decoration: none;   
+                        @include hover-effect();
+                    }
+                }
+            }            
+        }
+        .nav-tabs {
+            border-bottom: 1px solid #666;
+            padding-left: 30px;
+            .nav-item {
+                border: 1px solid #666;
+                border-bottom: none;
+                margin-right: 15px;
+                a {
+                    border-top:  5px solid $blue;
+                    font-family: $lato_regular;
+                    color: #021844;
+                    font-size: 17px;
+                    padding: 10px 60px;
+                    border-bottom-color: transparent;
+                    &.active {
+                        background-color: #F5F5F5;
+                    }
+                }
+            }
+        }
+        .tab-content {
+            background-color: #F5F5F5;
+            padding: 0px 0px 50px;
+            .box {
+                background-color: #fff;
+                @include box-shadow();
+                @include border-radius(10px);
+                padding: 10px;
+                margin-bottom: 10px;
+                a.button {
+                    font-family: $roboto_condensed;
+                   color: #fff;
+                   font-size: 16px;
+                   text-align: center;
+                   height: 20px;
+                   line-height: 20px;
+                   height: auto;
+                   width: 110px;
+                   @include border-radius(4px);
+                   &.export {
+                        background-color: #fff;
+                        color: #666;
+                        border: 2px solid $darkBlue;
+                        height: 34px;
+                        line-height: 30px;
+                        float: right;
+                        font-size: 16px;
+                        @include border-radius(20px);
+                        width: auto;
+                        i {
+                            color: $darkBlue;
+                            font-size: 20px;
+                        }
+                        &:hover {
+                            background-color: $darkBlue;
+                            color: #fff;
+                            transition: all 0.4s ease-in-out 0s;
+                            i {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+                h4, h3 {
+                    margin: 0;
+                    line-height: 1;                     
+                }
+                h4 {
+                    font-size: 19px;
+                    margin-bottom: 20px;
+                     &.last {
+                         margin-bottom: 10px;
+                     }
+                }
+                h5 {
+                    span.number {
+                        color: #7B7B7B;
+                        font-size: 13px;
+                    }
+                    &.last {
+                        margin-bottom: 0;
+                    }
+                }
+                p.smaller {
+                    font-size: 14px; 
+                    i {
+                        color: #00D9A7;
+                        font-size: 18px;
+                        margin-left: 20px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+            .quarter {
+                width: 23%;
+                padding: 0;
+                margin-right: 1%;
+                float: left;
+                p.arrow {
+                    span {
+                        width: 14%;
+                        padding: 5px 0;                    
+                        text-align: center;
+                        display: inline-block;
+                        &.withBorder {
+                            border-right: 1px solid #eeeeee;
+                            width: 40%;
+                        }
+                    }
+                    &.withBgrd {
+                        background-color: #F5F1F1;
+                    }
+                }
+            }
+            .half {
+                float: left;
+                width: 45%;
+                &:nth-child(2) {
+                    padding-right: 10px;
+                    box-sizing: border-box;
+                }
+            }
+            .fifth {
+                width: 18%;
+                float: left;
+                margin-right: 1%;
+            }
+            .lastBox {
+                width: 14%;
+                float: left;                          
+                h3 {
+                    padding-top: 40px;
+                    text-align: center;
+                    padding-bottom: 10px;
+                    margin-bottom: 10px;
+                    border-bottom:  1px solid #ccc;
+                }
+                p {
+                    font-size: 15px;
+                    color: #575757;
+                    span {
+                        color: #004777;
+                        i {
+                            color: #00D9A7;
+                        }
+                    }
+                }
+            }                  
+        }
+    }    
+}
+
+/*-------------------- Highcarts - override styles---------------------*/
+.highcharts-credits {
+    display: none;
+}
+
+/*-------------------- DatePicker - override styles---------------------*/
+.ui-datepicker {
+    padding: 1.5%;
+    .ui-datepicker-prev, .ui-datepicker-next {
+        background-image: url("../img/arrowLeft.png");
+        display: block;
+        width: 12px;
+        height: 20px;
+        &:hover {
+            border: none;
+        }
+    }
+    .ui-datepicker-next {
+        background-image: url("../img/arrowRight.png");
+    }
+}
+.ui-widget-header {
+    background: none;
+    border: none;
+    font-weight: normal;
+    color: #565A5C;
+    font-family: $lato_bold;
+}
+.ui-widget-header .ui-icon {
+    background-image: none;
+}
+.ui-widget.ui-widget-content {
+    @include border-radius(10px);
+}
+.ui-datepicker {
+    th {
+        padding: 0.2em;
+        text-align: center;
+        font-size: 12px;
+        font-family: $lato_regular;
+        font-weight: normal;
+        color: #666;
+    }
+    td {
+        a {
+            border: 1px solid #efefef !important;
+            font-family: $lato_regular;
+            color: #666;
+        }
+    }
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    background-color: #ffffff;
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    background: $orange;
+    color: #fff;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+    background-color: #E4E7E7;
+    color: #666;
+}
+/*-------------------------- RESPONSIVE DESIGN --------------------------*/
+
+@media screen and (max-width: 1850px) {
+    .container {
+        max-width: 1200px;
+        .content {
+            .tab-content {
+                .quarter, .fifth {
+                    width: 49%;
+                }
+                .fifth:nth-child(4) {
+                    clear: left;
+                }
+                .lastBox {
+                    width: 50%;
+                    float: none;
+                    clear: left;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1200px) {
+    .container {
+        .content {
+            .searchForWrapper {
+                input {
+                    width: 25%;
+                }
+            }
+            .moreInfoWrap {
+                .dateWrap {
+                    position: relative;
+                    clear: left;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 992px) {
+    .flex {
+        &.blockElement {
+            display: block;
+        }
+        .heightFixed {
+            height: auto;
+        }
+    }
+}
+@media screen and (max-width: 920px) {
+    .container {
+        .content {
+            .tab-content {
+                .quarter, .fifth {
+                    width: 100%;
+                    clear: both;
+                }
+                .lastBox {
+                    width: 100%;
+                    float: left;
+                    clear: left;
+                    margin: 0 auto;
+                }
+            }
+            .nav-tabs {
+                .nav-item {
+                    margin-left: 0px; 
+                    margin-right: 5px;                   
+                    a {
+                        padding: 10px 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 720px) {
+    .button {
+        &.reset {
+            margin-top: 40px;
+        }
+    }
+    .container {
+        .content {
+            .searchForWrapper {
+                input {
+                    width: 100%;
+                    margin: 0 0 10px 0;
+                    &.contractId {
+                        margin-right: 0;
+                    }
+                }
+            }            
+            .moreInfoWrap {
+                .dateWrap {
+                    a.filterButton {
+                        padding: 0 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 490px) {
+    .container {
+        .content {
+            .tab-content {
+                .box {
+                    h4, h3, h5 {
+                        font-size: 14px;
+                        font-family: $lato_regular;
+                    }
+                }
+                .quarter {
+                    p.arrow {
+                        span {
+                            width: 13%;
+                        }
+                    }
+                }
+            }
+        }
+    }   
+    input {
+        &.datepicker:nth-child(4), &.datepicker:nth-child(5) {
+            width: 100px;
+        }
+    } 
+}

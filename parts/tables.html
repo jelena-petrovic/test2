@@ -1,0 +1,182 @@
+<div class="margin mt20 mb20 clearfix">
+    <a href="#" class="button darkBlue right infoButton">HGw Info <i class="fa fa-angle-up"></i></a>
+</div>
+<div class="innerContent">
+    <div class="quarter">
+        <div class="box">
+            <h3>Overall Status <a class="button right orange">Medium</a></h3>
+        </div>
+        <div class="box">
+            <h3>RSS Status <a class="button right red">Bad</a></h3>
+        </div>
+        <div class="box">
+            <h3>Client RSS Status <a class="button right orange">Medium</a></h3>
+        </div>
+        <div class="box">
+            <h4>Interference Status - overall<a class="button right orange">Medium</a></h4>
+            <h4>Interference Status Co - Channel<a class="button right green">Good</a></h4>
+            <h4 class="last">Interference Status - Adjacent<a class="button right red">Bad</a></h4>
+        </div>
+        <div class="box clearfix">
+            <h3 class="margin mb20">HGw Interference</h3>
+            <div class="half">
+                <h5>UniFi<a class="button right green">Good</a></h5>
+            </div>
+            <div class="half right">
+                <h5>Home<a class="button right orange">Medium</a></h5>
+            </div>
+        </div>
+        <div class="box">
+            <h4>Retransmission Status<a class="button right red">Bad</a></h4>
+            <h5>HGw Number of retransmissions <span class="number right randomValue" data-random-min="3000"
+                    data-random-max="7000">5515</span></h5>
+        </div>
+        <div class="box">
+            <h5>Total number of clients<span class="number right randomValue" data-random-min="100" data-random-max="200">120</span></h5>
+            <h5 class="last">Max. number of concurent clients<span class="number right randomValue" data-random-min="5"
+                    data-random-max="50">10</span></h5>
+        </div>
+        <div class="box">
+            <h4>HGw Combined Status </h4>
+            <h5>HGw number of clients<span class="number right randomValue" data-random-min="5" data-random-max="50"></span></h5>
+            <h5>HGw number of sticky clients<span class="number right randomValue" data-random-min="5" data-random-max="30"></span></h5>
+            <h5 class="last">Data transfered [GB]<span class="number right">5.7</span></h5>
+        </div>
+    </div>
+    <div class="quarter">
+        <div class="box padding p0">
+            <h3 class="padding p10 pb20">HGw Bitrate [Mbps]</h3>
+            <p class="arrow"><span class="withBorder">KPI Name</span>
+                <span>Min</span>
+                <span>Avg</span>
+                <span>Max</span>
+                <span>Last</span></p>
+            <p class="arrow withBgrd"><span class="withBorder">Bitrate</span>
+                <span class="randomValue" data-random-min="10" data-random-max="50"></span>
+                <span class="randomValue" data-random-min="10" data-random-max="50"></span>
+                <span class="randomValue" data-random-min="10" data-random-max="50"></span>
+                <span class="randomValue" data-random-min="10" data-random-max="50"></span>
+            </p>
+        </div>
+        <div class="box">
+            <h5 class="last">HGw total traffic [GB]<span class="number right">5.7</span></h5>
+        </div>
+        <div class="box padding p0">
+            <h3 class="padding p10 pb20">HGw RSS</h3>
+            <p class="arrow"><span class="withBorder">KPI Name</span>
+                <span>Min</span>
+                <span>Avg</span>
+                <span>Max</span>
+                <span>Last</span></p>
+            <p class="arrow withBgrd"><span class="withBorder">RSS [dBm]</span>
+                <span class="randomValue" data-random-min="-20" data-random-max="-50"></span>
+                <span class="randomValue" data-random-min="-20" data-random-max="-50"></span>
+                <span class="randomValue" data-random-min="-20" data-random-max="-50"></span>
+                <span class="randomValue" data-random-min="-20" data-random-max="-50"></span></p>
+        </div>
+        <div class="box padding p0">
+            <h3 class="padding p10 pb20">HGw Interference Network RSS</h3>
+            <p class="arrow"><span class="withBorder">KPI Name</span>
+                <span>Avg</span>
+                <span>Max</span>
+                <span>Last</span></p>
+            <p class="arrow withBgrd"><span class="withBorder">RSS [dBm]</span>
+                <span class="randomValue" data-random-min="-20" data-random-max="-50"></span>
+                <span class="randomValue" data-random-min="-20" data-random-max="-50"></span>
+                <span class="randomValue" data-random-min="-20" data-random-max="-50"></span></p>
+        </div>
+    </div>
+    <div class="fifth">
+        <div class="box clearfix">
+            <h3 class="margin mb20">Wifi connected time</h3>
+            <div style="position: relative;">
+                <div class="chartContainer" style="height: 150px;" data-chart-colors='["#20FC8F", "#D3D3D3"]'
+                    data-chart-labels='["Percent of time <br> with connected<br> user(s)", "Others"]'></div>
+                <div class="addText"></div>
+            </div>
+        </div>
+        <div class="box clearfix">
+            <h3 class="margin mb20">HGw Wifi usage</h3>
+            <div style="position: relative;">
+                <div class="chartContainer" style="height: 150px;" data-chart-colors='["#20FC8F", "#FFA100", "#FF5B58"]'
+                    data-chart-labels='["Low", "Medium", "High"]'></div>
+                <div class="addText"></div>
+            </div>
+        </div>
+        <div class="box clearfix">
+            <h3 class="margin mb20">HGw Interference</h3>
+            <div style="position: relative;">
+                <div class="chartContainer" style="height: 150px;" data-chart-colors='["#20FC8F", "#FFA100", "#FF5B58"]'
+                    data-chart-labels='["Low", "Medium", "High"]'></div>
+                <div class="addText"></div>
+            </div>
+        </div>
+        <div class="box clearfix">
+            <h3 class="margin mb20">HGw Interference Home</h3>
+            <div style="position: relative;">
+                <div class="chartContainer" style="height: 150px;" data-chart-colors='["#20FC8F", "#FFA100", "#FF5B58"]'
+                    data-chart-labels='["Low", "Medium", "High"]'></div>
+                <div class="addText"></div>
+            </div>
+        </div>
+    </div>
+    <div class="fifth">
+        <div class="box">
+            <h3 class="margin mb20">HGw Channel</h3>
+            <p class="smaller">Auto channel enabled: <span class=""><i class="fa fa-check"> </i>Yes</span></p>
+            <p class="smaller">Current channel: 7</p>
+            <p class="smaller">No. of ch.changes: 25</p>
+            <div style="position: relative;">
+                <div class="chartContainer" style="height: 150px;" data-chart-colors='["#8EF8FF", "#27AAE1"]'
+                    data-chart-labels='["Auto: Yes", "Auto: No"]'></div>
+                <div class="addText"></div>
+            </div>
+        </div>
+        <div class="box">
+            <h3 class="margin mb20">HGw Percent of time with Sticky Clients</h3>
+            <div style="position: relative;">
+                <div class="chartContainer" style="height: 150px;" data-chart-colors='["#20FC8F", "#D3D3D3"]'
+                    data-chart-labels='["Percent of time <br> with connected<br> user(s)", "Others"]'></div>
+                <div class="addText"></div>
+            </div>
+        </div>
+        <div class="box">
+            <h3 class="margin mb20">HGw Client's RSS Status</h3>
+            <div style="position:relative;">
+                <div class="chartContainer" style="height: 150px;" data-chart-colors='["#20FC8F", "#FFA100", "#FF5B58"]'
+                    data-chart-labels='["Low", "Medium", "High"]'></div>
+                <div class="addText"></div>
+            </div>
+        </div>
+        <div class="box">
+            <h3 class="margin mb20">HGw RSS Status</h3>
+            <div style="position:relative;">
+                <div class="chartContainer" style="height: 150px;" data-chart-colors='["#20FC8F", "#FFA100", "#FF5B58"]'
+                    data-chart-labels='["Low", "Medium", "High"]'></div>
+                <div class="addText"></div>
+            </div>
+        </div>
+    </div>
+    <div class="lastBox">
+        <div class="box">
+            <h3>HGw Info</h3>
+            <p>WiFi Enabled: <span class="right"><i class="fa fa-check"></i> Yes</span></p>
+            <p>Hgw standard: <span class="right">802.11b</span></p>
+            <p>IP Address: <span class="right">192.168.1.1</span></p>
+            <p>Mac: <span class="right">AA:BB:XX:DD:GG</span></p>
+            <p>Contact No.: <span class="right">22010101010</span></p>
+            <p>Auto channel enabled: <span class="right"><i class="fa fa-check"> </i>Yes</span></p>
+            <p>SSID: <span class="right">ibis-wifi</span></p>
+            <p>Channel: <span class="right">6</span></p>
+            <p>Security: <span class="right">WPA/WPA2-PSK</span></p>
+            <p>Band: <span class="right">2,4GHz</span></p>
+            <p>Hidden SSID: <span class="right">No</span></p>
+            <p>Bandwith: <span class="right">22MHZ</span></p>
+            <p>Up time: <span class="right">(35369)2 days, 19:04:10</span></p>
+            <p>Equipment: <span class="right">ABC</span></p>
+            <p>Description: <span class="right">modem</span></p>
+            <p>CMTSID: <span class="right">BG-C-1-IBIS</span></p>
+            <p>Firmware: <span class="right">2.2.1004.76</span></p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <title>Report</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Test">
+    <meta name="author" content="Jelena Petrovic">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/dist/script.min.js"></script>
+
+
+    <link rel="stylesheet" href="/dist/style.min.css" type="text/css" media="all" />
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Report</h1>
+            <div class="searchForWrapper">
+                <form action="" method="get" class="searchForm">
+                    <input type="text" name="macAddress" class="macAddress" id="macAddress" placeholder="MAC: address" />
+                    <input type="text" name="contractId" class="contractId" id="contractId" placeholder="Contract ID" />
+                    <i class="fa fa-refresh" style="font-size:20px"></i>
+                    <input type="submit" class="button" id="applyFilters" value="Apply filters" />
+                    <span id="errorMessage" style="display: none;">You must enter valid values for MAC address and contract ID</span>
+                </form>
+            </div>
+            <div class="moreInfoWrap clearfix" style="display: none;">
+                <div class="infoBlock">
+                    <h3>Currently viewing data:</h3>
+                    <p><span>MAC address:</span><span id="selectedMac"></span></p>
+                    <p><span>ContractID:</span><span id="selectedContract"></span></p>
+                    <p><span>City:</span>Budapest</p>
+                </div>
+                <div class="dateWrap">
+                    <a href="#" class="filterButton oneDay active">1 Day</a>
+                    <a href="#" class="filterButton filterButtonRight sevenDays">7 Day</a>
+                    <div style="clear:left;"></div>
+                    <input id="datepicker" class="datepicker" /> - <input id="datepicker2" class="datepicker" />
+                </div>
+                <a href="#" class="button reset right" id="resetFilter">Reset filters</a>
+            </div>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#tables">Tables</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#graphs">Graphs</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content clearfix">
+                <div id="tables" class="container tab-pane active">
+                    <div id="tablesContent"></div>
+                </div>
+                <div id="graphs" class="container tab-pane fade">
+                    <div id="graphsContent"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

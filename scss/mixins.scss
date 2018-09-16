@@ -1,0 +1,19 @@
+@mixin border-radius($radius) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+}
+@mixin hover-effect() {
+	opacity: 0.7;
+	transition: all 0.4s ease-in-out 0s;
+	text-decoration: none;
+}
+@mixin box-shadow() {
+	-webkit-box-shadow: 1px 2px 2px 1px #DBDBDB;
+    box-shadow: 1px 2px 2px 1px #DBDBDB; 
+}
+@mixin h3Style {
+    color: #004777;
+    font-size: 22px;
+    font-family: 'Lato Regular', Arial;
+}

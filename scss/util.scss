@@ -1,0 +1,110 @@
+  .alignleft {
+    text-align: left !important;
+  }
+  
+  .alignright {
+    text-align: right !important;
+  }
+  
+  .center {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .leftclear {
+      float: left;
+      clear: both;
+      width: 100%;
+      text-align: left;
+  }
+  .block {
+    display: block;
+  }
+  .padding {
+    &.p0 {
+      padding: 0px !important;
+    }
+  
+    $i: 80;
+    @while $i > 0 {
+      &.p#{$i} {
+        padding: 1px * $i !important;
+      }
+      $i: $i - 5;
+    }
+  
+    $i: 80;
+    @while $i >= 0 {
+      &.pt#{$i} {
+        padding-top: 1px * $i !important;
+      }
+      $i: $i - 5;
+    }
+  
+    $i: 80;
+    @while $i >= 0 {
+      &.pb#{$i} {
+        padding-bottom: 1px * $i !important;
+      }
+      $i: $i - 5;
+    }
+  
+    $i: 80;
+    @while $i >= 0 {
+      &.pl#{$i} {
+        padding-left: 1px * $i !important;
+      }
+      $i: $i - 5;
+    }
+  
+    $i: 80;
+    @while $i >= 0 {
+      &.pr#{$i} {
+        padding-right: 1px * $i !important;
+      }
+      $i: $i - 5;
+    }
+  }
+  
+.margin {
+    &.m0 {
+      margin: 0px !important;
+    }
+ 
+   $i: 80;
+   @while $i > 0 {
+     &.m#{$i} {
+       margin: 1px * $i !important;
+     }
+     $i: $i - 5;
+   }
+ 
+   $i: 80;
+   @while $i >= 0 {
+     &.mt#{$i} {
+       margin-top: 1px * $i !important;
+     }
+     $i: $i - 5;
+   }
+ 
+   $i: 80;
+   @while $i >= 0 {
+     &.mb#{$i} { margin-bottom: 1px * $i !important; }
+     $i: $i - 5;
+   }
+ 
+   $i: 80;
+   @while $i > 0 {
+     &.mr#{$i} {
+       margin-right: 1px * $i !important;
+     }
+     $i: $i - 5;
+   }
+ 
+   $i: 80;
+   @while $i > 0 {
+     &.ml#{$i} {
+       margin-left: 1px * $i !important;
+     }
+     $i: $i - 5;
+   }
+ }  
